@@ -48,7 +48,7 @@ function calcRemainTime() {
     return;
   }
 
-  remainTime = convertMs(pickedDate - new Date());
+  const remainTime = convertMs(pickedDate - new Date());
 
   days.textContent = addLeadingZero(remainTime.days.toString());
   hours.textContent = addLeadingZero(remainTime.hours.toString());
