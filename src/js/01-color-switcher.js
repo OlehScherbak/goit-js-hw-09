@@ -10,6 +10,7 @@ btnStart.addEventListener('click', onStartClick);
 btnStop.addEventListener('click', onStopClick);
 
 function onStartClick() {
+  bgcololChange();
   timerId = setInterval(bgcololChange, 1000);
   btnStart.disabled = true;
 }
