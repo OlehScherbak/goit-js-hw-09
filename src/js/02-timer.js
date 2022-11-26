@@ -37,9 +37,14 @@ function timeCheck(selectedDates) {
 
 btn.addEventListener('click', onStartClick);
 
+let timerId;
 function onStartClick() {
+  if (pickedDate < new Date()) {
+    Notiflix.Notify.failure('Please choose a date in the future');
+    return;
+  }
   calcRemainTime();
-  const timerId = setInterval(calcRemainTime, 1000);
+  timerId = setInterval(calcRemainTime, 1000);
 }
 
 function calcRemainTime() {
