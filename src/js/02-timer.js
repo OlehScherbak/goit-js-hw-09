@@ -39,7 +39,7 @@ btn.addEventListener('click', onStartClick);
 
 function onStartClick() {
   calcRemainTime();
-  timerId = setInterval(calcRemainTime, 1000);
+  const timerId = setInterval(calcRemainTime, 1000);
 }
 
 function calcRemainTime() {
