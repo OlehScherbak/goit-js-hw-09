@@ -34,12 +34,12 @@ function startPromiseChain(evt) {
   for (let position = 1; position <= amount; position += 1) {
     const delay = initDelay + step * (position - 1);
     createPromise(position, delay)
-      .then(({ position, delay }) => {
+      .then(() => {
         Notiflix.Notify.success(
           `✅ Fulfilled promise ${position} in ${delay}ms`
         );
       })
-      .catch(({ position, delay }) => {
+      .catch(() => {
         Notiflix.Notify.failure(
           `❌ Rejected promise ${position} in ${delay}ms`
         );
